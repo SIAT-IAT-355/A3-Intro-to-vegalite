@@ -32,7 +32,11 @@ async function render() {
     { Platform: d.Platform, Region: 'Other_Sales', Sales: d.Other_Sales }
   ]);
 
-  const filteredDatayear = data.filter(d => !isNaN(d.Year) && d.Year > 1900); 
+
+  // Filter out invalid or missing years
+  const filteredDataYear = data.filter(d => !isNaN(d.Year) && d.Year > 1950);  
+
+
 
 
   // Visualization 1: Global Sales by Genre and Platform
@@ -54,7 +58,7 @@ async function render() {
   });
   
 
-  
+  /*
   // Visualization 2: Interactive Sales Over Time by Platform and Genre
 
   const vlSpec2 = vl
@@ -75,6 +79,29 @@ async function render() {
 vegaEmbed("#view2", vlSpec2).then((result) => {
     result.view.run();
 });
+*/
+// Visualization 2: Interactive Bar Chart for Sales Over Time by Platform and Genre
+const vlSpec2 = vl
+    .markBar({ size: 15 })  // Adjust the size of the bars to make them thicker
+    .data(filteredDataYear)
+    .encode(
+      //vl.x().fieldT('Year').title('Year').axis({ tickCount: 10 }),  // Treat Year as a quantitative field
+      vl.x().fieldN('Year').title('Year'),  // Treat Year as a nominal field to ensure whole numbers for years
+      vl.y().fieldQ('Global_Sales').aggregate('sum').title('Global Sales (in millions)'),  // Total sales on y-axis
+      vl.color().fieldN('Platform').scale({ scheme: 'category20' }).title('Platform'),  // Use category20 color scheme for distinct platform colors
+      vl.tooltip([vl.fieldN('Platform'), vl.fieldN('Genre'), vl.fieldQ('Global_Sales')])  // Tooltip with platform, genre, and sales
+    )
+    .width(800)
+    .height(400)
+    .toSpec();
+
+  // Embed the bar chart in the specified div (view2-bar)
+  vegaEmbed("#view2-bar", vlSpec2).then((result) => {
+    result.view.run();
+  });
+
+
+
 
 
  // Visualization 3: Grouped Bar Chart for Regional Sales vs Platform with Legend
