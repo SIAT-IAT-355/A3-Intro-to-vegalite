@@ -64,7 +64,13 @@ For each variable in the dataset, describe the **data type** and provide a summa
   - Now that you’ve explored the dataset, create a visualization that highlights a pattern or story you find interesting.
   - **Reflection**: This is intentionally open-ended. Focus on a specific area that piques your interest, such as sales trends in Japan, a focus on specific publishers, or how certain genres perform across regions. Feel free to get creative!
  
-- **Note:** For each visualization, work on at least two prompts.
+- **Note:** :For each of these 4 visualizations, we have already defined the overall topic.  
+You need to define two more precise questions/prompts for each one and then create a visualization based on them.  
+
+    For example, Visualization 1 says to create a visualization about **Global Sales by Genre and Platform**.  
+    One of your questions could be:  
+    - How much total sales have a specific group of genres achieved across all platforms?  
+    - Or: Which genre has the highest sales on a particular group of platforms?
 
  ### 3. Describe Your Design Choices
 For each of your visualizations, briefly describe why you chose the specific visualization type (what made you curious/interested), how it helps convey the data effectively, and any interesting design choices you made.
