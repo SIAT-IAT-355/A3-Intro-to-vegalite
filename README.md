@@ -1,5 +1,5 @@
 # Assignment 3: Introduction to Data Visualization with Vega-Lite
-**Due Date:** October 13th, 11:55 PM
+**Due Date:** February 16th, 11:55 PM
 
 [Link to Assignment on GitHub](https://github.com/SIAT-IAT-355/A3-Intro-to-vegalite)
 
