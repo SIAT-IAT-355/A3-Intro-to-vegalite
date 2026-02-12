@@ -65,10 +65,10 @@ For each variable in the dataset, describe the **data type** and provide a summa
   - **Reflection**: This is intentionally open-ended. Focus on a specific area that piques your interest, such as sales trends in Japan, a focus on specific publishers, or how certain genres perform across regions. Feel free to get creative!
  
 - **Note:** :For each of these 4 visualizations, we have already defined the overall topic.  
-You need to define two more precise questions/prompts for each one and then create a visualization based on them.  
+You need to define two precise questions/prompts for each one and then create a visualization for each.  
 
     For example, Visualization 1 says to create a visualization about **Global Sales by Genre and Platform**.  
-    One of your questions could be:  
+    Your questions could be:  
     - How much total sales have a specific group of genres achieved across all platforms?  
     - Or: Which genre has the highest sales on a particular group of platforms?
 
